@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your mood and get daily motivation with Your Daily Boost.">
+
+  <title>Mood Tracker - Your Daily Boost</title>
+
+  <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+<link rel="manifest" href="assets/favicon/site.webmanifest">
+
+<!-- CSS Stylesheet -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="mood.html" class="active">Mood Tracker</a></li>
+      <li><a href="history.html">Mood History</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="container mood-tracker">
+<h2>How are you feeling today?</h2>
+<div class="mood-buttons">
+<button onclick="saveMood('happy')">😊 Happy</button>
+<button onclick="saveMood('sad')">😢 Sad</button>
+<button onclick="saveMood('stressed')">😩 Stressed</button>
+<button onclick="saveMood('tired')">😴 Tired</button>
+<button onclick="saveMood('notsure')">🤔 Not Sure</button>
+</div>
+<p id="quoteOutput">Pick a mood to see your daily boost!</p>
+</section>
+
+
+<!-- Add Custom Quote -->
+  <section class="add-quote">
+    <h3>Add Your Own Quote</h3>
+    <form id="addQuoteForm">
+      <label for="moodSelect">Choose Mood:</label>
+      <select id="moodSelect" required>
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="stressed">Stressed</option>
+        <option value="tired">Tired</option>
+        <option value="notsure">Not Sure</option>
+      </select>
+      <br><br>
+      <label for="newQuote">Quote:</label>
+      <input type="text" id="newQuote" placeholder="Enter your quote" required>
+      <br><br>
+      <button type="submit">Add Quote</button>
+    </form>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="socials">
+    <div class="container text-center py-4">
+    <div class="mb-3">
+    <div class="justify-content-center align-items-center flex-wrap">
+      <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a> 
+         <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram page">
+          <i class="fa-brands fa-instagram"></i>
+        </a> 
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Visit our LinkedIn page">
+          <i class="fa-brands fa-linkedin"></i>
+        </a> 
+         <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+    </div>
+    </div>
+    <p class="mb-0 fw-semibold">© 2025 <strong>Your Daily Boost. All Rights Reserved.</strong></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="assets/js/script.js"></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/af3ee3b7e1.js" crossorigin="anonymous"></script>
+</body>
+</html>
