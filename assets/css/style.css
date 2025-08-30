@@ -1,172 +1,147 @@
-/* Imported Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=DM+Sans:wght@400;600;700&display=swap');
 
-/* Global Styles */
-body {
-  font-family: 'DM Sans', 'Arbutus Slab', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f9f9;
-  color: #333;
-  line-height: 1.6;
+:root{
+  --brand:#4cafef;
+  --brand-dark:#2b7fb8;
+  --text:#333;
+  --surface:#ffffff;
+  --muted:#6c757d;
 }
+
+/* Base styles */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:'DM Sans','Arbutus Slab',sans-serif;
+  color:var(--text);
+  background:#f4f9f9;
+}
+
+/* Offset for fixed navbar */
+.section-padding-top{padding-top:6rem}
 
 /* Navbar */
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  background: #4cafef;
-  padding: 10px;
-  margin: 0;
+.bg-brand{ background: var(--brand); }
+.navbar .navbar-brand .logo{
+  width:36px; 
+  height:36px; 
+  object-fit:contain;
 }
-.navbar li {
-  margin: 0 15px;
+.navbar .brand-text{ color:#fff; }
+.navbar .nav-link{ color:#eaf7ff; font-weight:600; }
+.navbar .nav-link:hover,
+.navbar .nav-link.active{ color:#fff; text-decoration:underline; }
+
+/* Hero */
+.hero{
+  background: radial-gradient(1200px 600px at 50% -20%, #9dd9ff 0%, #6ec1ff 35%, var(--brand) 65%, var(--brand-dark) 100%);
+  padding:6rem 0 4rem;
 }
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
+.btn-cta{
+  background:#fff; 
+  color:var(--brand-dark); 
+  font-weight:700; 
+  border:none;
+  border-radius:12px; 
+  padding:.8rem 1.4rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
 }
-.navbar a.active {
-  text-decoration: underline;
+.btn-cta:hover{ background:#f6f9ff; color:#1e6b95; }
+
+/* Quote Card */
+.quote-card{
+  max-width: 760px;
+  margin: 0 auto;
+  border:0; 
+  border-radius:16px;
+  box-shadow:0 6px 24px rgba(0,0,0,.06);
+}
+.text-brand{ color: var(--brand-dark); }
+
+/* Mood buttons styles */
+.btn-mood{
+  border:none;
+  border-radius:14px;
+  color:#fff; 
+  font-weight:700; 
+  letter-spacing:.2px;
+  transition: transform .15s ease, box-shadow .15s ease, filter .2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
 }
 
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: #d0f0f5;
-  border-radius: 12px;
-}
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 1.2rem;
-}
-.btn {
-  background: #4cafef;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-/* Container */
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  text-align: center;
-}
+.btn-mood:hover{ transform: translateY(-2px); box-shadow:0 10px 22px rgba(0,0,0,.18); filter:brightness(1.05); }
+.mood-happy{ background:#FFD93D; color:#333; }
+.mood-sad{ background:#6C63FF; }
+.mood-stressed{ background:#FF6B6B; }
+.mood-tired{ background:#95A5A6; }
+.mood-notsure{ background:#4CAF50; }
 
 /* Button Styles */
-button {
-  margin: 10px;
-  padding: 15px 25px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.mood-buttons button{
-    background: #eaf7ff;
-}
-
-.mood-buttons button:hover {
-  background: #bde0fe;
-}
-
-#history-list + button, .add-quote button {
-  background: #4cafef;
-  color: white;
-}
-
-#history-list + button:hover, .add-quote button:hover {
-  background: #0077b6;
-}
-
-/* Section */
-section {
-  margin: 40px auto;
-  padding: 30px;
-  max-width: 800px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-/* Mood History */
-#history-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
-}
-
-#history-list li {
-  background: #eaf7ff;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-/* Quote */
-#quote {
-  font-size: 1.5rem;
-  font-style: italic;
-  margin-top: 20px;
-  color: #0077b6;
+.btn{
+  --bs-btn-padding-x: none !important;
+  --bs-btn-padding-y: none !important;
 }
 
 /* Add Quote */
-.add-quote input, .add-quote select {
-  padding: 10px;
-  margin: 10px 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  width: 60%;
-  max-width: 250px;
+.add-quote .form-label{ font-weight:600; color:var(--muted); }
+
+.toast-box{
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 24px;
+  background: #111827;
+  color: #fff;
+  padding: .8rem 1.1rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  z-index: 1080;
+}
+.toast-box.show{
+  opacity: 1;
+  transform: translateX(-50%) translateY(-6px);
 }
 
-.add-quote select {
-  width: 150px;
+/* History cards styles */
+.history-card{
+  border:0; 
+  border-radius:14px;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
 }
+.badge-mood{
+  font-size:.85rem; 
+  padding:.5rem .7rem; 
+  border-radius:999px; 
+  font-weight:700;
+}
+.badge-happy{ background:#FFE27A; color:#333; }
+.badge-sad{ background:#8b84ff; }
+.badge-stressed{ background:#ff8d8d; }
+.badge-tired{ background:#b7c3c6; color:#222; }
+.badge-notsure{ background:#6cd47a; }
 
 /* Footer */
-footer {
-  background: #4cafef;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+footer .social-link{
+  color:#fff; 
+  font-size:1.25rem; 
+  display:inline; 
+  width:40px; 
+  height:40px;
+  align-items:center; 
+  justify-content:center; 
+  border-radius:50%;
+  transition: transform .15s ease, background .15s ease;
+}
+footer .social-link:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,.12);
 }
 
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Media Queries */
-@media (max-width: 600px) {
-  .mood-buttons button {
-    width: 100%;
-    max-width: 250px;
-  }
-
-  .add-quote input, .add-quote select {
-    width: 100%;
-    max-width: none;
-    margin: 10px 0;
-  }
+/* Small screens niceties */
+@media (max-width: 576px){
+  .brand-text{ font-size:1rem; }
 }

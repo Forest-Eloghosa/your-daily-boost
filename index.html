@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to Your Daily Boost, a wellness app for tracking your mood and boosting positivity.">
-  
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Welcome to Your Daily Boost, a wellness app for tracking your mood and boosting positivity." />
   <title>Your Daily Boost</title>
 
   <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
-<!-- CSS Stylesheet -->
-<link rel="stylesheet" href="assets/css/style.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+  <!-- App CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
-  
-    <!-- Navbar -->
-    <header>
-  <nav>
-    <h1>Your Daily Boost</h1>
-    <ul class="navbar">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="mood.html">Mood Tracker</a></li>
-      <li><a href="history.html">Mood History</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-    </header>
+<body class="d-flex flex-column min-vh-100">
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h2>Welcome to Your Daily Boost</h2>
-    <p>Track your mood, get motivational quotes, and a little boost of positivity.</p>
-    <a href="mood.html" class="btn">Start Tracking</a>
+  <!-- Nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-brand shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/favicon/apple-touch-icon.png" alt="Your Daily Boost logo" class="logo" />
+        <span class="fw-bold brand-text">Your Daily Boost</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="mood.html">Mood Tracker</a></li>
+          <li class="nav-item"><a class="nav-link" href="history.html">Mood History</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero section-padding-top text-center text-white">
+    <div class="container">
+      <h1 class="display-5 fw-bold mb-3">Welcome to Your Daily Boost 🌱</h1>
+      <p class="lead mb-4">Track your mood, reflect on your day, and get a little boost of positivity.</p>
+      <a class="btn btn-cta btn-lg" href="mood.html">Start Tracking</a>
+    </div>
   </header>
 
-    <!-- Daily Quote -->
-  <section class="quote-section">
-    <h3>Your Boost of the Day</h3>
-    <p id="quoteOutput">Click a mood to get started!</p>
+  <!-- Daily Quote / CTA -->
+  <section class="py-5">
+    <div class="container">
+      <div class="card quote-card mx-auto">
+        <div class="card-body text-center">
+          <h2 class="h4 mb-3">Your Journey Starts Here</h2>
+          <p id="quoteOutput" class="fs-5 text-brand mb-0">
+            Taking the first step is always the hardest. But remember, every small step counts!
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
-       <!-- Footer -->
-  <footer class="socials">
-    <div class="container text-center py-4">
-    <div class="mb-3">
-    <div class="justify-content-center align-items-center flex-wrap">
-      <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Visit our Twitter page">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a> 
-         <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram page">
-          <i class="fa-brands fa-instagram"></i>
-        </a> 
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="Visit our LinkedIn page">
-          <i class="fa-brands fa-linkedin"></i>
-        </a> 
-         <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-    </div>
-    </div>
-    <p class="mb-0 fw-semibold">© 2025 <strong>Your Daily Boost. All Rights Reserved.</strong></p>
+  <!-- Footer -->
+  <footer class="mt-auto bg-brand text-white py-4">
+    <div class="container text-center">
+      <ul class="socials list-unstyled d-flex justify-content-center gap-4 mb-3">
+        <li><a class="social-link" href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+      </ul>
+      <p class="mb-0 fw-semibold">© 2025 <strong>Your Daily Boost. All Rights Reserved.</strong></p>
     </div>
   </footer>
 
-<!-- JavaScript -->
+  <!-- Bootstrap JS (for navbar collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- App JS -->
   <script src="assets/js/script.js"></script>
 
-<!-- Font Awesome -->
+  <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/af3ee3b7e1.js" crossorigin="anonymous"></script>
 </body>
 </html>
