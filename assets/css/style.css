@@ -41,6 +41,13 @@ body {
 .navbar .nav-link:hover,
 .navbar .nav-link.active { color:#fff; text-decoration:underline; }
 
+.brand-text {
+  font-size: 2rem;      /* Increased as needed (default is about 1.25rem) */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
 /* Hero */
  .hero {
   background: -o-radial-gradient(50% -20%, 1200px 600px, #9dd9ff 0%, #6ec1ff 35%, var(--brand) 65%, var(--brand-dark) 100%);
@@ -318,6 +325,26 @@ h1 {
 .badge-tired{ background:#b7c3c6; color:#222; }
 .badge-notsure{ background:#6cd47a; }
 
+/* Support Callout Box */
+.support-box {
+  background: #f0f8ff; /* soft calming blue */
+  border-left: 6px solid #4a90e2; /* accent border */
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.support-box strong {
+  color: #2a5d9f;
+}
+
+.support-box p {
+  margin: 0;
+}
+
 /* Footer */
 footer .social-link {
   color:#333 !important; 
@@ -369,7 +396,7 @@ footer .social-link:hover {
     padding-right: 0.75rem;
   }
 
-  .brand-text { font-size: 1rem; }
+  .brand-text { font-size: 1.3rem; }
 
   .btn-mood, .btn-cta, .btn {
     display: block;
