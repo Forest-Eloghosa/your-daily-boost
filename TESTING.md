@@ -4,7 +4,8 @@
 - [Overview](#overview)  
 - [Testing Strategy](#testing-strategy)  
 - [Functionality Testing](#functionality-testing)  
-- [Responsiveness Testing](#responsiveness-testing)  
+- [Responsiveness Testing](#responsiveness-testing)
+- [Device Testing Images](#device-testing-images)  
 - [Accessibility Testing](#accessibility-testing)  
 - [Browser Compatibility](#browser-compatibility)  
 - [Validators](#validators)  
@@ -69,46 +70,34 @@ The goal of testing was to ensure that the **Your Daily Boost** web app:
 - **Samsung (Chrome & Internet Browser):** Pages remain responsive
 - **Windows (Chrome & Edge):** Layout displays correctly
 
+## Device Testing Images
+
 ![Site Testing](assets/testing/multiple_site_testing/tested-on-safari-and-chrome.jpeg "tested-on-Iphone-safari-and-chrome")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tested-on-firefox-and-edge.jpeg "tested-on-Iphone-firefox-and-edge")
-
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tested-on-tablet-chrome-and-internet-browser.jpg "tested-on-Samsung-tablet-chrome-and-internet-browser")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tested-on-desktop-chrome.png "tested-on-desktop-chrome")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tested-on-desktop-edge.png "tested-on-desktop-edge")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tested-on-desktop-edge2.png "tested-on-desktop-edge2")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-dark-theme-about-page.jpg "tablet-dark-theme-about-page")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-dark-theme-home-page.jpg "tablet-dark-theme-home-page")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-dark-theme-mood-history-page.jpg "tablet-dark-theme-mood-history-page")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-dark-theme-mood-tracker-page.jpg "tablet-dark-theme-mood-tracker-page")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-dark-theme-home-page.jpg "tablet-dark-theme-home-page")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-light-theme-mood-tracker-page.jpg "tablet-light-theme-mood-tracker-page")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-light-theme-mood-history-page.jpg "tablet-light-theme-mood-history-page")
-
----
+ 
 ![Site Testing](assets/testing/multiple_site_testing/tablet-light-theme-about-page.jpg "tablet-light-theme-about-page")
 
 ---
