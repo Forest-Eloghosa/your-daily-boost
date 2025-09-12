@@ -1,4 +1,4 @@
-/* jshint esversion: 6 */
+/* jshint esversion: 11 */
 
 // Your Daily Boost — script.js (polished)
 
