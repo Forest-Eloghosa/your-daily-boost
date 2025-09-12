@@ -1,36 +1,17 @@
 # Your Daily Boost – Testing Documentation  
-
-## Table of Contents
-- [Overview](#overview)  
-- [Testing Strategy](#testing-strategy)  
-- [Functionality Testing](#functionality-testing)  
-- [Responsiveness Testing](#responsiveness-testing)
-- [Device Testing Images](#device-testing-images)  
-- [Accessibility Testing](#accessibility-testing)  
-- [Browser Compatibility](#browser-compatibility)  
-- [Validators](#validators)  
-- [Bug Fixes & Improvements](#bug-fixes--improvements)  
-- [Lighthouse Results](#lighthouse-results)  
-- [Summary](#summary)  
-
----
-
 ## Overview
 The goal of testing was to ensure that the **Your Daily Boost** web app:  
 - Works correctly across devices and browsers  
 - Is responsive and accessible  
 - Meets semantic and modern coding standards  
-- Provides a calm, inclusive, and technically sound user experience  
-
+- Provides a calm, inclusive, and technically sound user experience
 ---
-
 ## Testing Strategy
 - **Manual Testing:** Step-by-step feature checks against user stories.  
 - **Cross-Browser Testing:** Chrome, Edge, Firefox.  
 - **Device Testing:** iPhone, Samsung tablet, Windows desktop, Android.  
 - **Automated Validation:** HTML, CSS, JavaScript, Lighthouse.  
 - **Bug Tracking:** Documented issues, fixes, and retesting.  
-
 ---
 
 ## Functionality Testing  
@@ -127,7 +108,8 @@ No critical issues found.
 
 ### HTML
 - Validated with [W3C Markup Validation Service](https://validator.w3.org/)  
-- All pages passed after fixes  
+- All main site pages including `404.html` were tested and passed the W3C HTML validation.  
+- The custom 404 error page provides a user-friendly message and a link back to the home page for improved navigation.  
 
 ![HTML Validation Error Found](assets/testing/HTML-Validator-Error-found-Mood-Page.png "Error Found on Mood Page (before fix)")
 
@@ -138,6 +120,8 @@ No critical issues found.
 ![HTML Validation No Errors (About Page)](assets/testing/HTML-Validator-No-Error-About-Page.png "About Page No Errors")
 
 ![HTML Validation No Errors (History Page)](assets/testing/HTML-Validator-No-Error-Mood-History-Page.png "History Page No Errors")
+
+![HTML Validation No Errors (404 Page)](assets/testing/HTML-Validator-No-Error-404-Page.png "404 Page No Errors")
 
 ---
 
@@ -152,10 +136,12 @@ No critical issues found.
 ### JavaScript
 - Validated with [JSHint](https://jshint.com/)
 
--  No critical issues; unused variable removed 
+-  No critical issues; unused variable removed
 
-- Added `/* jshint esversion: 6 */`  
+- I'm aware of the warning, `"Misleading line break before ?"` , but it doesn't impact the site functionality, and have left it as-is due to better readability.
 
+- Added `/* jshint esversion: 11 */`
+  
 ![JavaScript Validation](assets/testing/JavaScript-Validation-No-Error.png "JavaScript No Errors")  
 
 ---
@@ -184,17 +170,17 @@ No critical issues found.
    - Added `.section-padding-top` for fixed navbar spacing.  
 
 3. **Mood Buttons Stacking Incorrectly**  
-- **Cause:** Mixed custom CSS and Bootstrap grid inconsistencies. 
-- **Fix:** Standardized layout using Custom CSS grid with media queries for responsiveness.
+    - **Cause:** Mixed custom CSS and Bootstrap grid inconsistencies. 
+    - **Fix:** Standardized layout using Custom CSS grid with media queries for responsiveness.
 
 4. **Quotes Repeating / Not Updating**
-   - **Cause:** `Math.random()` returned the same index multiple times, and the DOM update logic wasn’t resetting.
-   - **Fix:** Implemented a **Fisher–Yates shuffle** per session. Quotes are now randomized at load, and each mood cycles through all quotes before repeating.  
+    - **Cause:** `Math.random()` returned the same index multiple times, and the DOM update logic wasn’t resetting.
+    - **Fix:** Implemented a **Fisher–Yates shuffle** per session. Quotes are now randomized at load, and each mood cycles through all quotes before repeating.  
 
 5. Quote persistence
-**Problem:** When a new quote is added with addQuote(), it updates quotes object in memory, but it doesn’t save to localStorage. Meaning: if i refresh the page, the new quote disappears.
+    - **Problem:** When a new quote is added with addQuote(), it updates quotes object in memory, but it doesn’t save to localStorage. Meaning: if i refresh the page, the new quote disappears.
 
-**Fix:** updated code to save quotes to localStorage:localStorage.setItem("quotes", JSON.stringify(quotes));
+    - **Fix:** updated code to save quotes to localStorage:localStorage.setItem("quotes", JSON.stringify(quotes));
        And when the page loads, restore it:
 const savedQuotes = JSON.parse(localStorage.getItem("quotes"));
 if (savedQuotes) {
@@ -202,39 +188,39 @@ if (savedQuotes) {
 }
 
 6. Toast UX, No Alerts
-**Improvement:** Replaced intrusive `alert()` calls with a small toast. If an element with `id="toast"` exists, it’s used; otherwise a minimal fallback toast is rendered.
+    - **Improvement:** Replaced intrusive `alert()` calls with a small toast. If an element with `id="toast"` exists, it’s used; otherwise a minimal fallback toast is rendered.
 
 7. **JavaScript Reference Error (`clearMoods`)**
-   - Removed unused `window.saveMood` / `window.clearMoods` lines.
+    - Removed unused `window.saveMood` / `window.clearMoods` lines.
 
 8. **Mood History Not Rendering on Mood Page**
-   - **Cause:** `renderHistory()` only called on index page.
-   - **Fix:** Added call to `renderHistory()` on `mood.html` and ensured container exists with proper ID.
+    - **Cause:** `renderHistory()` only called on index page.
+    - **Fix:** Added call to `renderHistory()` on `mood.html` and ensured container exists with proper ID.
 
 9. Quote–History Mismatch
-**Problem:** The quote shown when a user clicked a mood sometimes differed from what was saved to history.
-**Cause:** History rendering occasionally replaced missing quotes with a *new* random quote.  
-**Fix:** The renderer now always shows the **exact** quote that was saved with the entry. No random substitution occurs in history.
+    - **Problem:** The quote shown when a user clicked a mood sometimes differed from what was saved to history.
+    - **Cause:** History rendering occasionally replaced missing quotes with a *new* random quote.  
+    - **Fix:** The renderer now always shows the **exact** quote that was saved with the entry. No random substitution occurs in history.
 
 10. Robust Quote Library Merge
-**Problem:** User-added quotes could produce duplicates or fail to merge reliably.
-**Fix:** On load, the app merges quotes from `localStorage` into the default library with **Set-based de-duplication**, then shuffles.
+    - **Problem:** User-added quotes could produce duplicates or fail to merge reliably.
+    - **Fix:** On load, the app merges quotes from `localStorage` into the default library with **Set-based de-duplication**, then shuffles.
 
 11. Defensive Mood Handling
-**Problem:** Variants like `Not Sure`, `not-sure`, `not_sure` caused key mismatches.
-**Fix:** Added a `normalizeMood()` helper (lowercase, remove non-letters, special-case `not sure` → `notsure`).
+     - **Problem:** Variants like `Not Sure`, `not-sure`, `not_sure` caused key mismatches.
+     - **Fix:** Added a `normalizeMood()` helper (lowercase, remove non-letters, special-case `not sure` → `notsure`).
 
 12. The “Clear moods” code runs immediately
-**Problem:** Right now, because the block is outside a function the code runs as soon as the script loads, clearing the history immediately:
-**Fix:** wrapped the function, referenced site-click a mood button which saved to history.
+     - **Problem:** Right now, because the block is outside a function the code runs as soon as the script loads, clearing the history immediately:
+     - **Fix:** wrapped the function, referenced site-click a mood button which saved to history.
 
 13. **Improved Code Comments and Structure**
-   - Added detailed comments for clarity.
-   - Grouped related functions together.
+     - Added detailed comments for clarity.
+     - Grouped related functions together.
 
 14. Positioning of Footer Icons
-**Problem:** Footer icons shifting positions
-**Fix:** Footer icons aligned with custom CSS styling for consistent placement.
+     - **Problem:** Footer icons shifting positions
+     - **Fix:** Footer icons aligned with custom CSS styling for consistent placement.
 
 ---
 
