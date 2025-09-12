@@ -5,22 +5,6 @@
 
 ![Your Daily Boost Logo](assets/images/Logo-image1.png "Your Daily Boost Logo")
 ---
- 
-## Table of Contents
-- [Project Description](#description)
-- [Project Goal](#project-goal)
-- [User Stories](#user-stories)
-- [Features and Design](#features-and-design)
-- [Key Enhancements in JavaScript](#key-enhancements-in-javascript)
-- [Wireframes](#wireframes)
-- [Project Structure](#project-structure)
-- [Technologies Used](#technologies-used)
-- [Testing](#testing)
-- [Validators](#validators)
-- [Deployment](#deployment)
-- [Credits](#credits)
-- [Developer, Disclaimer and Feedback](#developer-disclaimer-and-feedback)
----
 ## Description
 **Your Daily Boost** is a wellness web app designed to help users reflect on their daily mood and receive uplifting quotes tailored to how they feel. Whether you’re happy, sad, tired, stressed, or simply not sure, the app offers a supportive space to pause, check in with yourself, and get a boost of encouragement and the option is there to add your own quotes too!
 
@@ -77,6 +61,9 @@ Promote emotional well-being by giving users an easy, friendly way to reflect on
    - Gradient hero section  
    - Styled footer with social links  
    - Toast-style feedback messages (instead of intrusive alert boxes)
+
+6. **Custom 404 Error Page**  
+   Users who visit a non-existent page are shown a friendly 404 error screen with a prominent button to return to the homepage, ensuring smooth navigation and a consistent user experience.
 
 ##  Design
 - **Colors:** Calm, uplifting palette with distinct mood colors.  
@@ -268,7 +255,9 @@ git push origin main
 
 - Accessibility enhancements such as the **Skip Link pattern** and `:focus-visible` usage were adapted from accessibility best practices described by [W3C Web Accessibility Initiative](https://www.w3.org/WAI/).
 
-- Any other code not credited above (including mood/quote logic, history rendering, responsive styling, and bug fixes) was written originally by the developer.
+- The approach for working with localStorage and event delegation in my JavaScript code was guided by the tutorial [How LocalStorage and Event Delegation work](https://youtu.be/YL1F4dCUlLc?si=2arAGwdS2fBd6jDl&t=864) on YouTube.
+
+- Any other code not credited above was written originally by the developer.
 
 ---
 ### Acknowledgements
@@ -293,4 +282,5 @@ Feedback is welcome! Please reach out via
 - [LinkedIn](https://www.linkedin.com/in/forest-e-b16ab81ba)
 
 - [GitHub](https://github.com/Forest-Eloghosa)
+
 
