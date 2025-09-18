@@ -1,5 +1,5 @@
 
-/* Google Fonts */ 
+/* ==================== Google Fonts ==================== */ 
 @import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=DM+Sans:wght@400;600;700&display=swap');
 
 :root {
@@ -10,7 +10,7 @@
   --muted:#6c757d;
 }
 
-/* Base styles */
+/* =================== Base styles ==================== */
 *{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body {height:100%}
 
@@ -20,13 +20,11 @@ body {
   background:#f4f9f9;
 }
 
-/* Offset for fixed navbar */
+/* ===================== Navbar ======================== */
 .section-padding-top {padding-top:6rem}
 
-/* Navbar */
 .bg-brand { background: var(--brand); }
 
-/* Logo: bigger and responsive */
 .navbar .navbar-brand .logo {
   width:86px; 
   height:86px;
@@ -42,13 +40,13 @@ body {
 .navbar .nav-link.active { color:#fff; text-decoration:underline; }
 
 .brand-text {
-  font-size: 2rem;      /* Increased as needed (default is about 1.25rem) */
+  font-size: 2rem; 
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.1;
 }
 
-/* Hero */
+/* ======================== Hero Section ========================= */
  .hero {
   background: -o-radial-gradient(50% -20%, 1200px 600px, #9dd9ff 0%, #6ec1ff 35%, var(--brand) 65%, var(--brand-dark) 100%);
   background: radial-gradient(1200px 600px at 50% -20%, #9dd9ff 0%, #6ec1ff 35%, var(--brand) 65%, var(--brand-dark) 100%);
@@ -73,9 +71,9 @@ margin-top: 30px;
 
 .btn-cta:hover { background:#f6f9ff; color:#1e6b95; }
 
-/* Quote Card */
+/* ========================= Quote Card Section ========================= */
 .quote-card {
-  max-width: 1100px; /* consistent across desktop */
+  max-width: 1100px; 
   margin: 0 auto;
   border:0; 
   border-radius:16px;
@@ -89,12 +87,12 @@ h1 {
 }
 
 .container {
-  max-width: 1200px !important; /* wider container for desktop */
+  max-width: 1200px !important;
 }
 
 .text-brand { color: var(--brand-dark); }
 
-/* Mood buttons styles */
+/* ====================== Mood buttons styles ======================= */
 .mood-buttons-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -104,7 +102,7 @@ h1 {
   gap: 1rem; 
   -webkit-box-pack: center; 
       -ms-flex-pack: center; 
-          justify-content: center; /* center buttons */
+          justify-content: center;
 }
 
 .btn-mood {
@@ -120,9 +118,9 @@ h1 {
   transition: transform .15s ease, box-shadow .15s ease, filter .2s ease, -webkit-transform .15s ease, -webkit-box-shadow .15s ease, -webkit-filter .2s ease;
   -webkit-box-shadow: 0 6px 16px rgba(0,0,0,.12);
           box-shadow: 0 6px 16px rgba(0,0,0,.12);
-  padding: 1.1rem 1.8rem; /* increased size */
+  padding: 1.1rem 1.8rem; 
   font-size: 1.1rem;
-  min-width: 150px; /* slightly bigger */
+  min-width: 150px; 
 }
 
 .btn-mood:hover {
@@ -141,7 +139,7 @@ h1 {
 .mood-tired { background:#95A5A6; }
 .mood-notsure { background:#4CAF50; }
 
-/* Button Styles */
+/* ===================== General Button Styles ==================== */
 .btn {
   --bs-btn-padding-x: none !important;
   --bs-btn-padding-y: none !important;
@@ -154,7 +152,7 @@ h1 {
           box-shadow: 0 0 0 4px rgba(76, 175, 239, 0.25);
 }
 
-/* Add Quote form */
+/* ========================== Add Quote form ============================ */
 .add-quote {
   text-align: center;
   margin-top: 3rem;
@@ -240,7 +238,7 @@ h1 {
   border-radius: 12px;
 }
 
-/* Toast notification */
+/* ================== Toast notification ================== */
 .toast-box {
   position: fixed;
   left: 50%;
@@ -271,7 +269,7 @@ h1 {
           transform: translateX(-50%) translateY(-6px);
 }
 
-/*Skip link for accessibility*/
+/* ====================== Skip link for accessibility ======================= */
 .skip-link {
   position: absolute;
   left: -999px;
@@ -295,7 +293,7 @@ h1 {
   outline: 2px solid #007bff;
 }
 
-/* History cards styles */
+/* ======================== History cards styles ======================== */
 .history-card {
   -webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
   transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
@@ -325,10 +323,10 @@ h1 {
 .badge-tired{ background:#b7c3c6; color:#222; }
 .badge-notsure{ background:#6cd47a; }
 
-/* Support Callout Box */
+/* ===================== Support Callout Box ====================== */
 .support-box {
   background: #f0f8ff; /* soft calming blue */
-  border-left: 6px solid #4a90e2; /* accent border */
+  border-left: 6px solid #4a90e2; 
   padding: 1rem 1.5rem;
   border-radius: 12px;
   font-size: 1rem;
@@ -345,7 +343,7 @@ h1 {
   margin: 0;
 }
 
-/* Footer */
+/* ========================= Footer ========================== */
 footer .social-link {
   color:#333 !important; 
   font-size:1.25rem; 
@@ -370,12 +368,12 @@ footer .social-link:hover {
   -webkit-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
           transform: translateY(-2px);
-  background: rgba(0,0,0, 0.05); /* subtle hover background */
-  color: #6c757d !important; /* grey hover */
+  background: rgba(0,0,0, 0.05); 
+  color: #6c757d !important; 
 }
 
 
-/* Media Queries For Responsive Design */
+/* ================== Media Queries For Responsive Design ==================== */
 
 /* Small devices (max 576px) */
 @media (max-width: 576px) {
