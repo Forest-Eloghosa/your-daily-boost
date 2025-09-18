@@ -7,6 +7,7 @@
 ---
 ## Description
 **Your Daily Boost** is a wellness web app designed to help users reflect on their daily mood and receive uplifting quotes tailored to how they feel. Whether you’re happy, sad, tired, stressed, or simply not sure, the app offers a supportive space to pause, check in with yourself, and get a boost of encouragement and the option is there to add your own quotes too!
+
 ---
 ## Project Goal
 Promote emotional well-being by giving users an easy, friendly way to reflect on their feelings and receive instant support in the form of uplifting quotes.  
@@ -286,6 +287,7 @@ Feedback is welcome! Please reach out via
 - [LinkedIn](https://www.linkedin.com/in/forest-e-b16ab81ba)
 
 - [GitHub](https://github.com/Forest-Eloghosa)
+
 
 
 
