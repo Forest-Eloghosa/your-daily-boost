@@ -3,13 +3,10 @@
 ## Live Site
 [Visit Your Daily Boost](https://forest-eloghosa.github.io/your-daily-boost/)
 
-![Your Daily Boost Logo](assets/images/Logo-image1.png "Your Daily Boost Logo")
+![Your Daily Boost Finished Site](assets/images/your-daily-boost-finished-site.png "Your Daily Boost Finished Site")
 ---
 ## Description
 **Your Daily Boost** is a wellness web app designed to help users reflect on their daily mood and receive uplifting quotes tailored to how they feel. Whether you’re happy, sad, tired, stressed, or simply not sure, the app offers a supportive space to pause, check in with yourself, and get a boost of encouragement and the option is there to add your own quotes too!
-
-![Your Daily Boost Home page](assets/testing/multiple_site_testing/tested-on-desktop-edge.png "Your Daily Boost Home page")
-
 ---
 ## Project Goal
 Promote emotional well-being by giving users an easy, friendly way to reflect on their feelings and receive instant support in the form of uplifting quotes.  
@@ -116,7 +113,8 @@ Initial wireframes were created and includes adaptive layout and padding for:
 │ ├── images
 │ │ ├── logo-image1.png
 │ │ ├── logo-image2.png
-│ │ ├── Your-Daily-Boost-Wireframes
+│ │ ├── your-daily-boost-wireframes
+│ │ ├── your-daily-boost-finished-site
 │ ├── js/
 │ │ └── script.js
 │ ├── testing/
@@ -138,6 +136,7 @@ Initial wireframes were created and includes adaptive layout and padding for:
 │ │ ├── CSS-Validator-No-Error.png
 │ │ ├── HTML-Validator-Error-found-Mood-Page.png
 │ │ ├── HTML-Validator-Home-Page.png
+│ │ ├── HTML-Validator-No-Error-404-Page
 │ │ ├── HTML-Validator-No-Error-About-Page.png
 │ │ ├── HTML-Validator-No-Error-Mood-Page.png
 │ │ ├── JavaScript-Validation-No-Error.png
@@ -151,6 +150,8 @@ Initial wireframes were created and includes adaptive layout and padding for:
 ├── mood.html
 └── README.md
 ├── TESTING.md
+├── 404.html
+
 ```
 
 ---
@@ -244,7 +245,10 @@ git push origin main
 - Key insights from [Designveloper](https://www.designveloper.com/guide/web-application-development/) on web app development.
 
 - **Fonts:** Used Google Fonts - [DM Sans](https://fonts.google.com/specimen/DM+Sans), [Arbutus Slab](https://fonts.google.com/specimen/Arbutus+Slab)
+  
+- Wireframes were created using [balsamiq](https://balsamiq.com/)
 
+- *Finished site(Mock-up) was created using [Am I Responsive](https://ui.dev/amiresponsive?url=https://forest-eloghosa.github.io/your-daily-boost/)
 ---
 ### Code
 - Code to make labels visually hidden was taken from [byu1kim/notes](https://github.com/byu1kim/notes/tree/840c073d2f3a86b6bc70bbe159d37dca31019de3/content/Frontend/HTML.md)
@@ -282,5 +286,6 @@ Feedback is welcome! Please reach out via
 - [LinkedIn](https://www.linkedin.com/in/forest-e-b16ab81ba)
 
 - [GitHub](https://github.com/Forest-Eloghosa)
+
 
 
